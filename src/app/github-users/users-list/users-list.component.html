@@ -1,0 +1,70 @@
+<div class="page-body">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Users List</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+          <div class="form-group">
+            <input class="form-control" placeholder="Search User Name" [(ngModel)]="page.user" (keyup)="page.offset=0;setPage(page)">
+          </div>
+        </div>
+      </div>
+      <ngx-datatable
+        #table
+        class='data-table bootstrap'
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [cssClasses]='customClasses'
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [rows]="page.rows"
+        [externalPaging]="true"
+        [loadingIndicator]="loading"
+        [count]="page.count"
+        [offset]="page.offset"
+        [limit]="page.limit"
+        (page)='setPage($event)'
+        [scrollbarH]="true">
+        <ngx-datatable-column name="User" [width]="90" [sortable]="false">
+          <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+            <span>{{row.login}}</span>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Photo" [width]="90" [sortable]="false">
+          <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+            <a href="{{row.avatar_url}}" target="_blank" class="text-primary" style="text-decoration: none;">Click here</a>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="GitHub Link" [width]="90" [sortable]="false">
+          <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+            <a href="{{row.html_url}}" target="_blank" class="text-primary" style="text-decoration: none;">Click here to open</a>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Repositories" [width]="90" [sortable]="false">
+          <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+            <span class="text-primary" style="cursor: pointer" (click)="getRepos(row.repos_url);ngxSmartModalService.getModal('myModal').open()">View</span>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+<ngx-smart-modal #myModal identifier="myModal">
+  <h3>Repositories</h3>
+  <hr>
+  <div class="pt-3 pb-3 text-center" *ngIf="loadingRepos">Loading repos...</div>
+  <table class="table table-striped table-bordered" *ngIf="!loadingRepos">
+    <thead>
+      <tr>
+        <th>Repo Name</th>
+        <th>language</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let repo of repos">
+        <td class="preWrap">{{repo.name}} <a class="pl-2 fa fa-share-square text-primary" href="{{repo.html_url}}" target="_blank" aria-hidden="true"></a></td>
+        <td>{{repo.language ? repo.language : '-'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</ngx-smart-modal>

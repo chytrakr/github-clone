@@ -33,7 +33,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ##Users list
 
-![GitHub Users List](/repos.jpg)
+![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/list.jpg)
 
 ## Further help
 

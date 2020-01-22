@@ -1,5 +1,14 @@
 # GithubClone
 
+## node install
+
+  curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+  
+## Dependencies install
+
+  npm install
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
 
 ## Development server

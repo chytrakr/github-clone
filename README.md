@@ -31,9 +31,22 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-##Users list
+## Users list
 
-![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/list.jpg)
+![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/list.jpg)
+
+## Search user by username
+
+![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/search_user.png)
+
+## Repositories list of selected user
+
+![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/repos.jpg)
+
+## Used additional dependencies
+
+* @swimlane/ngx-datatable //table to display the users list
+* ngx-smart-modal // popup modal to display the repositories of selected user
 
 ## Further help
 

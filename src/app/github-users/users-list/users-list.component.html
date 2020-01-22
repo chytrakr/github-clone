@@ -30,6 +30,11 @@
             <span>{{row.login}}</span>
           </ng-template>
         </ngx-datatable-column>
+        <ngx-datatable-column name="Repositories" [width]="90" [sortable]="false">
+          <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+            <span class="text-primary" style="cursor: pointer" (click)="getRepos(row.repos_url);ngxSmartModalService.getModal('myModal').open()">View</span>
+          </ng-template>
+        </ngx-datatable-column>
         <ngx-datatable-column name="Photo" [width]="90" [sortable]="false">
           <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
             <a href="{{row.avatar_url}}" target="_blank" class="text-primary" style="text-decoration: none;">Click here</a>
@@ -38,11 +43,6 @@
         <ngx-datatable-column name="GitHub Link" [width]="90" [sortable]="false">
           <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
             <a href="{{row.html_url}}" target="_blank" class="text-primary" style="text-decoration: none;">Click here to open</a>
-          </ng-template>
-        </ngx-datatable-column>
-        <ngx-datatable-column name="Repositories" [width]="90" [sortable]="false">
-          <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
-            <span class="text-primary" style="cursor: pointer" (click)="getRepos(row.repos_url);ngxSmartModalService.getModal('myModal').open()">View</span>
           </ng-template>
         </ngx-datatable-column>
       </ngx-datatable>

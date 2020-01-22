@@ -43,6 +43,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/repos.jpg)
 
+![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/reposwithtext.jpg)
+
+
 ## Used additional dependencies
 
 * @swimlane/ngx-datatable //table to display the users list

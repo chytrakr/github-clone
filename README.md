@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Dependencies install
 
   npm install
-
+  
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -43,10 +43,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/repos.jpg)
 
+![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/reposwithtext.jpg)
+
+
 ## Used additional dependencies
 
-* @swimlane/ngx-datatable //table to display the users list
-* ngx-smart-modal // popup modal to display the repositories of selected user
+* @swimlane/ngx-datatable        //table to display the users list
+* ngx-smart-modal               // popup modal to display the repositories of selected user
 
 ## Further help
 

@@ -33,17 +33,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Users list
 
-![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/list.jpg)
+![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/list.png)
 
 ## Search user by username
 
-![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/search_user.png)
+![Search user by username](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/search_user.jpg)
 
 ## Repositories list of selected user
 
-![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/repos.jpg)
+![Repositories list of selected user](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/repos.jpg)
 
-![GitHub Users List](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/reposwithtext.jpg)
+![Repositories list of selected user](https://github.com/chytrakr/github-clone/blob/master/src/assets/images/reposwithtext.jpg)
 
 
 ## Used additional dependencies

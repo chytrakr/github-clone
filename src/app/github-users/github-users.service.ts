@@ -8,6 +8,6 @@ export class GithubUsersService {
   constructor(private http: HttpClient) { }
 
   fetchTableData(url): Promise<any> {
-    return this.http.get(url, { headers: { Authorization: 'token 69b431bf1caf5f559057db987b8adad89aa1932e', 'Content-Type': 'application/json'}}).toPromise();
+    return this.http.get(url, { headers: { Authorization: 'token 31258820d06ef8c2a99ca60ecb14c8c51ffc5384', 'Content-Type': 'application/json'}}).toPromise();
   }
 }

@@ -1,7 +1,7 @@
 <div class="page-body">
   <div class="row">
     <div class="col-sm-12">
-      <h2>Users List</h2>
+      <h2>GitHub Users List</h2>
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6 col-12">
           <div class="form-group">
@@ -25,7 +25,7 @@
         [limit]="page.limit"
         (page)='setPage($event)'
         [scrollbarH]="true">
-        <ngx-datatable-column name="User" [width]="90" [sortable]="false">
+        <ngx-datatable-column name="User Name" [width]="90" [sortable]="false">
           <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
             <span>{{row.login}}</span>
           </ng-template>
